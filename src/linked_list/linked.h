@@ -34,6 +34,12 @@ long int get_index_of(node_t **, long int);
 // remoção
 
 void pop_back(node_t**);
+pop_in_end(node_t**);
+pop_in_middle(node_t**, unsigned int);
+
+// inversão
+
+void reverse_list(node_t**);
 
 
 
