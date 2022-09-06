@@ -219,4 +219,33 @@ long int get_index_of(node_t **first, long int value)
 
 }
 
+/*
+    ****************************************
+                Remoção
+    ****************************************
+*/
+
+
+void pop_back(node_t** first)
+{
+    node_t* iterate;
+
+    iterate = *first;
+
+    if(iterate == NULL)
+    {
+        printf("A lista está vazia, remover itens é impossível");
+        return;
+    }
+    else
+    {
+        node_t* aux;
+
+        aux = *first;
+
+        iterate = iterate->next;
+
+        free(aux);
+    }
+}
 
