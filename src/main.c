@@ -52,9 +52,13 @@ int main(const int argc, const char* argv[])
 
 	printf("index of %ld: %ld\n", val, get_index_of(&ini, 42));
 
+	pop_back(&ini);
 
+	show_list(&ini);
 
+	reverse_list(&ini);
 
+	show_list(&ini);
 
 	return 0;
 }
