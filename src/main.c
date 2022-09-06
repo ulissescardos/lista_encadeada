@@ -48,6 +48,8 @@ int main(const int argc, const char* argv[])
 
 	append_in_middle(&ini, val, 5);
 
+	show_list(&ini);
+
 	printf("index of %ld: %ld\n", val, get_index_of(&ini, 42));
 
 
