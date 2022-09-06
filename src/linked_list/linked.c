@@ -248,3 +248,61 @@ void pop_back(node_t** first)
     }
 }
 
+pop_in_end(node_t** first)
+{
+    // todo
+}
+
+pop_in_middle(node_t** first, unsigned int index)
+{
+    // todo
+}
+
+
+/*
+    ***************************************
+                Inversão
+    ***************************************
+*/
+
+void reverse_list(node_t** first)
+{
+    node_t* iterate;
+    node_t *aux1, *aux2, *aux3;
+
+    iterate = *first;
+
+    if(iterate == NULL)
+    {
+        puts("A lista está vazia");
+        return;
+    }
+    else if(iterate->next == NULL)
+    {
+        puts("A lista possui apenas um item");
+        return;
+    }
+    else
+    {
+        aux1 = *first;
+        aux2 = aux1->next;
+        aux3 = aux2->next;
+
+        aux1->next = NULL;
+        aux2->next = aux1;
+
+        while(aux3 != NULL)
+        {
+            aux1 = aux2;
+            aux2 = aux3;
+
+            aux3 = aux3->next;
+
+            aux2->next = aux1;
+        }
+
+        *first = aux2;
+    }
+
+}
+
