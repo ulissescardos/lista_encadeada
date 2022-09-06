@@ -32,7 +32,7 @@ void show_list(node_t **first)
         return;
     }
     
-    puts("Lista :: ");
+    printf("Lista :: ");
 
     do
     {
