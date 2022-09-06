@@ -193,9 +193,11 @@ void append_in_middle(node_t** first, long int value, unsigned int index)
 
 long int get_index_of(node_t **first, long int value)
 {
-    long int index = 0;
+    unsigned int index = 0;
 
-    node_t *iterate = *first;
+    node_t *iterate;
+
+    iterate = *first;
 
     while(iterate != NULL)
     {
@@ -205,16 +207,13 @@ long int get_index_of(node_t **first, long int value)
         {
             return index;
         }
-        else{
-            index = -1;
-        }
 
         iterate = iterate->next;
     }
 
-    if(index == -1)
+    if(index >= get_size_of_list(first)+1)
     {
-        puts("value not found");
+        printf("index of %u not found\n", value);
         return index;
     }
 
