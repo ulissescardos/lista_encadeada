@@ -16,6 +16,31 @@ int main(const int argc, const char* argv[])
 
 	printf("random number: %ld\n", randint(100));
 
+	node_t *ini;
+
+	init_list(&ini);
+
+	for(int i = 0; i < 3; i++)
+	{
+		append_back(&ini, randint(100));
+	}
+
+	printf("Tamanho da lista: %ld\n", get_size_of_list(&ini));
+
+	for(int i = 0; i < 3; i++)
+	{
+		append_in_end(&ini, randint(100));
+	}
+
+	printf("Tamanho da lista: %ld\n", get_size_of_list(&ini));
+
+	for(int i = 0; i < 5; i++)
+	{
+		append_in_middle(&ini, randint(100), 4);
+	}
+
+	printf("Tamanho da lista: %ld\n", get_size_of_list(&ini));
+
 
 
 
