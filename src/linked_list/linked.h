@@ -31,6 +31,10 @@ void append_in_middle(node_t **, long int, unsigned int);
 // pegar indíce específico
 long int get_index_of(node_t **, long int);
 
+// remoção
+
+void pop_back(node_t**);
+
 
 
 #endif //   LINKED_H
