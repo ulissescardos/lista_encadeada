@@ -229,6 +229,7 @@ long int get_index_of(node_t **first, long int value)
 void pop_back(node_t** first)
 {
     node_t* iterate;
+    node_t* aux;
 
     iterate = *first;
 
@@ -239,11 +240,9 @@ void pop_back(node_t** first)
     }
     else
     {
-        node_t* aux;
-
         aux = *first;
 
-        iterate = iterate->next;
+        *first = (*first)->next;
 
         free(aux);
     }
