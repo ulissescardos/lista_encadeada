@@ -24,6 +24,9 @@ void append_back(node_t **, long int);
 void append_in_end(node_t **, long int);
 void append_in_middle(node_t **, long int, unsigned int);
 
+// pegar indíce específico
+long int get_index_of(node_t **, long int);
+
 
 
 #endif //   LINKED_H
