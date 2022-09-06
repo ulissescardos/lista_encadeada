@@ -43,6 +43,8 @@ size_t get_size_of_list(node_t** first)
 
 }
 
+
+
 /*
     ***************************************
                 Inserção
@@ -150,5 +152,39 @@ void append_in_middle(node_t** first, long int value, unsigned int index)
 
 }
 
+/*
+    ****************************************
+            Idíce de um valor
+    ****************************************
+*/
+
+long int get_index_of(node_t **first, long int value)
+{
+    long int index = 0;
+
+    node_t *iterate = *first;
+
+    while(iterate != NULL)
+    {
+        index++;
+
+        if(value == iterate->data)
+        {
+            return index;
+        }
+        else{
+            index = -1;
+        }
+
+        iterate = iterate->next;
+    }
+
+    if(index == -1)
+    {
+        puts("value not found");
+        return index;
+    }
+
+}
 
 
