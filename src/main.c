@@ -22,24 +22,33 @@ int main(const int argc, const char* argv[])
 
 	for(int i = 0; i < 3; i++)
 	{
-		append_back(&ini, randint(100));
+		append_back(&ini, randint(1000));
 	}
 
 	printf("Tamanho da lista: %ld\n", get_size_of_list(&ini));
+	show_list(&ini);
 
 	for(int i = 0; i < 3; i++)
 	{
-		append_in_end(&ini, randint(100));
+		append_in_end(&ini, randint(1000));
 	}
 
 	printf("Tamanho da lista: %ld\n", get_size_of_list(&ini));
+	show_list(&ini);
 
 	for(int i = 0; i < 5; i++)
 	{
-		append_in_middle(&ini, randint(100), 4);
+		append_in_middle(&ini, randint(1000), 4);
 	}
 
 	printf("Tamanho da lista: %ld\n", get_size_of_list(&ini));
+	show_list(&ini);
+
+	long int val = 42;
+
+	append_in_middle(&ini, val, 5);
+
+	printf("index of %ld: %ld\n", val, get_index_of(&ini, 42));
 
 
 
