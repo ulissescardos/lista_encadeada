@@ -26,8 +26,13 @@ size_t get_size_of_list(node_t** first)
 
     if(*first != NULL)
     {
-        iterate = (*first)->next;
-        size++;
+        iterate = *first;
+
+        while(iterate != NULL)
+        {
+            size++;
+            iterate = iterate->next;
+        }
     }
     else
     {
