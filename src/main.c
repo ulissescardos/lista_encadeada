@@ -60,5 +60,16 @@ int main(const int argc, const char* argv[])
 
 	show_list(&ini);
 
+	for(int i = 0; i < 5; i++)
+	{
+		append_in_middle(&ini, val, i+1);
+	}
+
+	show_list(&ini);
+
+	int count = check_repetitions(&ini, val);
+
+	printf("Number of value %d is %d\n", val, count);
+
 	return 0;
 }
