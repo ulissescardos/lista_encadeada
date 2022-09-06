@@ -306,3 +306,38 @@ void reverse_list(node_t** first)
 
 }
 
+
+/*
+    ***************************************
+        Verificar se um item se repete
+    ***************************************
+*/
+
+int check_repetitions(node_t** first, long int value)
+{
+    unsigned int count = 0;
+
+    node_t* iterate;
+
+    iterate = *first;
+
+    if(iterate == NULL)
+    {
+        count = 0;
+
+        return 0;
+    }
+
+    while (iterate != NULL)
+    {
+        if(iterate->data == value)
+        {
+            count++;
+        }
+
+        iterate = iterate->next;
+    }
+
+    return count;
+
+}
