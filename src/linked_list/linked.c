@@ -13,7 +13,40 @@ void init_list(node_t** first)
 }
 
 /*
-    *************************************
+    ******************************************
+            Print da lista
+    ******************************************
+*/
+
+void show_list(node_t **first)
+{
+    size_t i = 0;
+
+    node_t* iterate;
+
+    iterate = *first;
+
+    if(iterate == NULL)
+    {
+        puts("Lista Vazia");
+        return;
+    }
+    
+    puts("Lista :: ");
+
+    do
+    {
+        printf(" %d", iterate->data);
+        iterate = iterate->next;
+    }
+    while(iterate != NULL);
+
+    puts("");
+    
+}
+
+/*
+    ************************r*************
             Tamanho da Lista
     *************************************
 */
