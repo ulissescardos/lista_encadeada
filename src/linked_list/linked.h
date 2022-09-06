@@ -14,6 +14,10 @@ typedef struct node node_t;
 
 void init_list(node_t **);
 
+// mostrar a lista
+
+void show_list(node_t **);
+
 // tamanho da lista
 
 size_t get_size_of_list(node_t **);
