@@ -41,6 +41,9 @@ pop_in_middle(node_t**, unsigned int);
 
 void reverse_list(node_t**);
 
+// contar repetições
+
+int check_repetitions(node_t**, long int);
 
 
 #endif //   LINKED_H
